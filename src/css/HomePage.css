@@ -136,6 +136,9 @@
   margin-top: 60px;
   margin-right: 20px;
 }
+.Card {
+  width: 100vw;
+}
 .List-Card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -144,14 +147,15 @@
 .List-Warp-Card {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  width: 445px;
+  width: 350px;
   height: 350px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  cursor: pointer;
 }
 .IMG-Warp-Card {
   height: 200px;
-  width: 445px;
+  width: 350px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
@@ -161,8 +165,13 @@
   margin-left: 10px;
 }
 .Text h2 {
-  font-size: 20px;
-  color: white;
+  font-size: 17px;
+}
+.Text p {
+  font-size: 12px;
+}
+.Text li {
+  font-size: 12px;
 }
 .IMG-Text {
   height: 50px;
@@ -170,8 +179,10 @@
   border-radius: 50%;
 }
 .List-Text {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
   color: white;
+  margin-top: 10px;
 }
 .Text-Watching {
   display: flex;
@@ -182,7 +193,7 @@
 .fa-ellipsis-vertical {
   font-size: 25px;
 }
-.List-Card button {
+.btn-list-dropdown {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,8 +205,9 @@
   border: none;
   background-color: black;
   color: white;
+  cursor: pointer;
 }
-.List-Card button:hover {
+.btn-list-dropdown:hover {
   background-color: black;
   border: 1px solid white;
 }
