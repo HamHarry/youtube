@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../css/HomePage.css";
+import "../css/ChoiseHomPage.css";
 const HomePage = () => {
   const [uxui, setUxui] = useState(true);
 
@@ -47,6 +48,49 @@ const HomePage = () => {
     );
   };
 
+  const renderCard = () => {
+    return (
+      <div className="Card">
+        <div className="List-Choise">
+          <div className="btn-list-choise">ทั้งหมด</div>
+          <div className="btn-list-choise">เกม</div>
+          <div className="btn-list-choise">เพลง</div>
+          <div className="btn-list-choise">การ์ตูน</div>
+          <div className="btn-list-choise">รายการตลก</div>
+        </div>
+        <div className="List">
+          <div className="List-Card">
+            <div className="List-Warp-Card">
+              <img
+                src="/src/image/listplayTalon.png"
+                alt="talon"
+                className="IMG-Warp-Card"
+              />
+              <div className="List-Text">
+                <img
+                  src="/src/image/Talon.png"
+                  alt="talon"
+                  className="IMG-Text"
+                />
+                <div className="Text">
+                  <h2>ถ้าเจอหมด ก็เล่นได้หมด | Flight Club 5</h2>
+                  <p>TALON Valorant</p>
+                  <div className="Text-Watching">
+                    <p>การดู 5.3 พัน ครั้ง</p>
+                    <li>1 ชั่วโมงที่ผ่านมา</li>
+                  </div>
+                </div>
+                <button>
+                  <i className="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div>
       {renderNav()}
@@ -55,117 +99,117 @@ const HomePage = () => {
           {uxui && (
             <div className="Choise">
               <div className="Choise-Home">
-                <button>
+                <div className="btn-home">
                   <i className="fa-solid fa-house"></i>
                   <p>หน้าแรก</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-home">
                   <i className="fa-brands fa-vimeo-v"></i>
                   <p>Shorts</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-home">
                   <i className="fa-solid fa-photo-film"></i>
                   <p>การติดตาม</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-home">
                   <i className="fa-regular fa-circle-play"></i>
                   <p>YouTube Music</p>
-                </button>
+                </div>
               </div>
               <br />
               <hr />
               <br />
               <div className="Choise-Me">
-                <button className="Is-Me">
+                <div className="Is-Me">
                   <p>คุณ</p>
                   <i className="fa-solid fa-angle-right"></i>
-                </button>
-                <button>
+                </div>
+                <div className="btn-me">
                   <i className="fa-regular fa-address-book"></i>
                   <p>ช่องของคุณ</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-me">
                   <i className="fa-solid fa-rotate-left"></i>
                   <p>ประวัติการเข้าชม</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-me">
                   <i className="fa-solid fa-list-ul"></i>
                   <p>เพลย์ลิสต์</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-me">
                   <i className="fa-regular fa-thumbs-up"></i>
                   <p>วิดิโอที่ชอบ</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-me">
                   <i className="fa-solid fa-download"></i>
                   <p>การดาวน์โหลด</p>
-                </button>
+                </div>
               </div>
               <br />
               <hr />
               <br />
               <div className="Choise-Follow">
                 <p>การติดตาม</p>
-                <button>
+                <div className="btn-listfollow">
                   <img className="IMGLOGO" src="/src/image/HRK.jpg" alt="HRK" />
                   <p>HEARTROCKER</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-listfollow">
                   <img
                     className="IMGLOGO"
                     src="/src/image/OHANA.jpg"
                     alt="OHANA"
                   />
                   <p>Ohana clip</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-listfollow">
                   <img
                     className="IMGLOGO"
                     src="/src/image/RUBSHRB.jpg"
                     alt="RUBSHRB"
                   />
                   <p>RUBSHRB</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-listfollow">
                   <img
                     className="IMGLOGO"
                     src="/src/image/VRZO.jpg"
                     alt="VRZO"
                   />
                   <p>VRZO</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-listfollow">
                   <img
                     className="IMGLOGO"
                     src="/src/image/กายหงิด.png"
                     alt="กายหงิด"
                   />
                   <p>กายหงิด</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-listfollow">
                   <img
                     className="IMGLOGO"
                     src="/src/image/ยกกำลัง.png"
                     alt="ยกกำลัง"
                   />
                   <p>ยกกำลัง</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-listfollow">
                   <img
                     className="IMGLOGO"
                     src="/src/image/เทพลีลา.jpg"
                     alt="เทพลีลา"
                   />
                   <p>เทพลีลา</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-listfollow">
                   <img
                     className="IMGLOGO"
                     src="/src/image/Talon.png"
                     alt="TALON"
                   />
                   <p>TALON Valorant</p>
-                </button>
+                </div>
               </div>
               <br />
               <hr />
@@ -188,71 +232,34 @@ const HomePage = () => {
           {!uxui && (
             <div className="Choise-UX">
               <div className="Choise-Home-UX">
-                <button>
+                <div className="btn-choise-ux">
                   <i className="fa-solid fa-house"></i>
                   <p>หน้าแรก</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-choise-ux">
                   <i className="fa-brands fa-vimeo-v"></i>
                   <p>Shorts</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-choise-ux">
                   <i className="fa-solid fa-photo-film"></i>
                   <p>การติดตาม</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-choise-ux">
                   <i className="fa-regular fa-circle-play"></i>
                   <p>YouTube Music</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-choise-ux">
                   <i className="fa-regular fa-address-book"></i>
                   <p>ช่องของคุณ</p>
-                </button>
-                <button>
+                </div>
+                <div className="btn-choise-ux">
                   <i className="fa-solid fa-download"></i>
                   <p>การดาวน์โหลด</p>
-                </button>
-              </div>
-            </div>
-          )}
-          <div className="Card">
-            <div className="List-Choise">
-              <button>ทั้งหมด</button>
-              <button>เกม</button>
-              <button>เพลง</button>
-              <button>การ์ตูน</button>
-              <button>รายการตลก</button>
-            </div>
-            <div className="List">
-              <div className="List-Card">
-                <div className="List-Warp-Card">
-                  <img
-                    src="/src/image/listplayTalon.png"
-                    alt="talon"
-                    className="IMG-Warp-Card"
-                  />
-                  <div className="List-Text">
-                    <img
-                      src="/src/image/Talon.png"
-                      alt="talon"
-                      className="IMG-Text"
-                    />
-                    <div className="Text">
-                      <h2>ถ้าเจอหมด ก็เล่นได้หมด | Flight Club 5</h2>
-                      <p>TALON Valorant</p>
-                      <div className="Text-Watching">
-                        <p>การดู 5.3 พัน ครั้ง</p>
-                        <li>1 ชั่วโมงที่ผ่านมา</li>
-                      </div>
-                    </div>
-                    <button>
-                      <i className="fa-solid fa-ellipsis-vertical"></i>
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
+          {renderCard()}
         </div>
       </div>
     </div>

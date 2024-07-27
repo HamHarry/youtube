@@ -1,0 +1,212 @@
+/* class Choise =============================================== */
+.Choise-Container {
+  position: static;
+  display: flex;
+  width: 100%;
+  background-color: black;
+}
+.Choise {
+  display: flex;
+  flex-direction: column;
+  height: 830px;
+  width: 320px;
+  margin-left: 10px;
+  overflow: auto;
+}
+/* class Choise-Home =============================================== */
+.Choise-Home {
+  display: flex;
+  flex-direction: column;
+}
+.btn-home {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  height: 50px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-home:hover {
+  background-color: grey;
+}
+.fa-house {
+  margin-left: 10px;
+}
+.fa-vimeo-v {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.fa-photo-film {
+  margin-left: 10px;
+  margin-right: -2px;
+}
+.fa-circle-play {
+  margin-left: 10px;
+}
+/* class Choise-Me =============================================== */
+.Choise-Me {
+  display: flex;
+  flex-direction: column;
+}
+.btn-me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  height: 50px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-me:hover {
+  background-color: grey;
+}
+.Is-Me {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  height: 50px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.Is-Me:hover {
+  background-color: grey;
+}
+.Is-Me p {
+  margin-left: 10px;
+}
+.fa-address-book {
+  margin-left: 10px;
+}
+.fa-rotate-left {
+  margin-left: 10px;
+}
+.fa-list-ul {
+  margin-left: 10px;
+}
+.fa-thumbs-up {
+  margin-left: 10px;
+}
+.fa-download {
+  margin-left: 10px;
+}
+/* class Choise-Follow =============================================== */
+.Choise-Follow {
+  display: flex;
+  flex-direction: column;
+}
+.Choise-Follow p {
+  font-size: 20px;
+  margin-left: 10px;
+  color: white;
+}
+.btn-listfollow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  height: 50px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-listfollow:hover {
+  background-color: grey;
+}
+.IMGLOGO {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: -10px;
+  margin-left: 10px;
+}
+/* class Choise-Footer =============================================== */
+.Choise-Footer {
+  margin-left: 10px;
+  font-size: 15px;
+  margin-right: 10px;
+  color: white;
+}
+/* class Choise-UX =============================================== */
+.Choise-Home-UX {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+}
+.btn-choise-ux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  height: 70px;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-choise-ux:hover {
+  background-color: grey;
+}
+.Choise-Home-UX p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.Choise-Home-UX .fa-house {
+  margin: 0;
+}
+.Choise-Home-UX .fa-vimeo-v {
+  margin: 0;
+}
+.Choise-Home-UX .fa-photo-film {
+  margin: 0;
+}
+.Choise-Home-UX .fa-circle-play {
+  margin: 0;
+}
+.Choise-Home-UX .fa-address-book {
+  margin: 0;
+}
+.Choise-Home-UX .fa-download {
+  margin: 0;
+}
+/* class List-Choise =============================================== */
+.List-Choise {
+  position: fixed;
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.btn-list-choise {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  background-color: dimgray;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn-list-choise:hover {
+  background-color: grey;
+}
