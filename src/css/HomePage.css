@@ -1,0 +1,363 @@
+.Nav {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  width: 100%;
+  height: 80px;
+}
+/* class Nav-menu =============================================== */
+.Nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 20px;
+}
+.Premium {
+  height: 30px;
+  width: 130px;
+}
+.fa-bars {
+  font-size: 25px;
+  color: white;
+}
+.Btn-menu {
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: black;
+}
+.Btn-menu:hover {
+  background-color: grey;
+}
+/* class Nav-Search =============================================== */
+.Nav-Search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Search {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  width: 500px;
+  background-color: dimgray;
+}
+.Input-Search {
+  padding: 10px;
+  width: 430px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  background-color: black;
+  color: white;
+}
+.Input-Search:focus {
+  outline: none;
+  border: 1px solid dodgerblue;
+}
+.fa-magnifying-glass {
+  color: white;
+  margin-left: 15px;
+}
+.fa-microphone {
+  color: white;
+  font-size: 20px;
+}
+.Btn-microphone {
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: dimgray;
+  margin-left: 10px;
+}
+.Btn-microphone:hover {
+  background-color: grey;
+}
+/* class Profile =============================================== */
+.Profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-right: 20px;
+}
+.fa-square-plus {
+  color: white;
+  font-size: 20px;
+}
+.Btn-plus {
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: black;
+}
+.Btn-plus:hover {
+  background-color: grey;
+}
+.fa-bell {
+  color: white;
+  font-size: 20px;
+}
+.Btn-fa-bell {
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  background-color: black;
+}
+.Btn-fa-bell:hover {
+  background-color: grey;
+}
+.Img-Profile {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+/* class Container =============================================== */
+.Container {
+  position: absolute;
+  display: flex;
+  top: 80px;
+  width: 100%;
+}
+/* class Choise =============================================== */
+.Choise-Container {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  background-color: black;
+  height: 100vh;
+}
+.Choise {
+  display: flex;
+  flex-direction: column;
+  height: 830px;
+  width: 320px;
+  margin-left: 10px;
+  overflow: auto;
+}
+/* class Choise-Home =============================================== */
+.Choise-Home {
+  display: flex;
+  flex-direction: column;
+}
+.Choise-Home button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  height: 50px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+.fa-house {
+  margin-left: 10px;
+}
+.fa-vimeo-v {
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.fa-photo-film {
+  margin-left: 10px;
+  margin-right: -2px;
+}
+.fa-circle-play {
+  margin-left: 10px;
+}
+/* class Choise-Me =============================================== */
+.Choise-Me {
+  display: flex;
+  flex-direction: column;
+}
+.Choise-Me button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  height: 50px;
+  margin-right: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+.Is-Me p {
+  margin-left: 10px;
+}
+.fa-address-book {
+  margin-left: 10px;
+}
+.fa-rotate-left {
+  margin-left: 10px;
+}
+.fa-list-ul {
+  margin-left: 10px;
+}
+.fa-thumbs-up {
+  margin-left: 10px;
+}
+.fa-download {
+  margin-left: 10px;
+}
+/* class Choise-Me =============================================== */
+.Choise-Follow {
+  display: flex;
+  flex-direction: column;
+}
+.Choise-Follow p {
+  font-size: 20px;
+  margin-left: 10px;
+}
+.Choise-Follow button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  height: 50px;
+  margin-right: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+.IMGLOGO {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: -10px;
+  margin-left: 10px;
+}
+/* class Choise-Footer =============================================== */
+.Choise-Footer {
+  margin-left: 10px;
+  font-size: 15px;
+  margin-right: 10px;
+  color: white;
+}
+/* class Choise-UX =============================================== */
+.Choise-Home-UX {
+  display: flex;
+  flex-direction: column;
+  width: 80px;
+}
+.Choise-Home-UX button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  height: 70px;
+  margin-top: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+.Choise-Home-UX button p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.Choise-Home-UX button .fa-house {
+  margin: 0;
+}
+.Choise-Home-UX button .fa-vimeo-v {
+  margin: 0;
+}
+.Choise-Home-UX button .fa-photo-film {
+  margin: 0;
+}
+.Choise-Home-UX button .fa-circle-play {
+  margin: 0;
+}
+.Choise-Home-UX button .fa-address-book {
+  margin: 0;
+}
+.Choise-Home-UX button .fa-download {
+  margin: 0;
+}
+/* class List-Choise =============================================== */
+.List-Choise {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+}
+.List-Choise button {
+  width: 100px;
+  height: 50px;
+  background-color: dimgray;
+  color: white;
+  border-radius: 10px;
+}
+/* class Card =============================================== */
+.List {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+.List-Card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+.List-Warp-Card {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  width: 445px;
+  height: 350px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.IMG-Warp-Card {
+  height: 200px;
+  width: 445px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.Text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.Text h2 {
+  font-size: 20px;
+  color: white;
+}
+.IMG-Text {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+.List-Text {
+  display: flex;
+  color: white;
+}
+.Text-Watching {
+  display: flex;
+}
+.Text-Watching li {
+  margin-left: 10px;
+}
+.fa-ellipsis-vertical {
+  font-size: 25px;
+}
+.List-Card button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  border: none;
+  background-color: black;
+  color: white;
+}
+.List-Card button:hover {
+  background-color: black;
+  border: 1px solid white;
+}
