@@ -205,6 +205,34 @@ const HomePage = () => {
             <p>การดาวน์โหลด</p>
           </div>
         </div>
+        {renderListChoiceUx()}
+      </div>
+    );
+  };
+
+  const renderListChoiceUx = () => {
+    return (
+      <div className="List-Choise-Ux">
+        <div className="List-Warp-Choise-Ux">
+          <div className="btn-list-choise-Ux">ทั้งหมด</div>
+          <div className="btn-list-choise-Ux">เกม</div>
+          <div className="btn-list-choise-Ux">เพลง</div>
+          <div className="btn-list-choise-Ux">การ์ตูน</div>
+          <div className="btn-list-choise-Ux">รายการตลก</div>
+        </div>
+      </div>
+    );
+  };
+  const renderListChoice = () => {
+    return (
+      <div className="List-Choise">
+        <div className="List-Warp-Choise">
+          <div className="btn-list-choise">ทั้งหมด</div>
+          <div className="btn-list-choise">เกม</div>
+          <div className="btn-list-choise">เพลง</div>
+          <div className="btn-list-choise">การ์ตูน</div>
+          <div className="btn-list-choise">รายการตลก</div>
+        </div>
       </div>
     );
   };
@@ -229,18 +257,10 @@ const HomePage = () => {
               <hr />
               <br />
               {renderChoiseFooter()}
+              {renderListChoice()}
             </div>
           )}
           {!uxui && renderChoiseUX()}
-          <div className="List-Choise">
-            <div className="List-Warp-Choise">
-              <div className="btn-list-choise">ทั้งหมด</div>
-              <div className="btn-list-choise">เกม</div>
-              <div className="btn-list-choise">เพลง</div>
-              <div className="btn-list-choise">การ์ตูน</div>
-              <div className="btn-list-choise">รายการตลก</div>
-            </div>
-          </div>
           {renderCard()}
         </div>
       </div>

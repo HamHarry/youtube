@@ -31,5 +31,13 @@ const mockupfollow = [
     img: "/src/image/logo/เทพลีลา.jpg",
     name: "เทพลีลา",
   },
+  {
+    img: "/src/image/logo/CigaretteSTV.jpg",
+    name: "CigaretteSTV",
+  },
+  {
+    img: "/src/image/logo/Three man down.png",
+    name: "ThreeManDown",
+  },
 ];
 export default mockupfollow;

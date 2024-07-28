@@ -224,3 +224,35 @@
 .btn-list-choise:hover {
   background-color: grey;
 }
+/* class List-Choise-Ux =============================================== */
+.List-Choise-Ux {
+  position: fixed;
+  left: 80px;
+  top: 83px;
+  background-color: black;
+  width: 93%;
+}
+.List-Warp-Choise-Ux {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.btn-list-choise-Ux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 35px;
+  background-color: dimgray;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Sarabun", sans-serif;
+  font-size: 13px;
+}
+.btn-list-choise-Ux:hover {
+  background-color: grey;
+}
