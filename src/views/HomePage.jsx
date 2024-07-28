@@ -55,13 +55,6 @@ const HomePage = () => {
   const renderCard = () => {
     return (
       <div className="Card">
-        <div className="List-Choise">
-          <div className="btn-list-choise">ทั้งหมด</div>
-          <div className="btn-list-choise">เกม</div>
-          <div className="btn-list-choise">เพลง</div>
-          <div className="btn-list-choise">การ์ตูน</div>
-          <div className="btn-list-choise">รายการตลก</div>
-        </div>
         <div className="List">
           <div className="List-Card">
             {dataListCard.map((item, index) => {
@@ -239,6 +232,15 @@ const HomePage = () => {
             </div>
           )}
           {!uxui && renderChoiseUX()}
+          <div className="List-Choise">
+            <div className="List-Warp-Choise">
+              <div className="btn-list-choise">ทั้งหมด</div>
+              <div className="btn-list-choise">เกม</div>
+              <div className="btn-list-choise">เพลง</div>
+              <div className="btn-list-choise">การ์ตูน</div>
+              <div className="btn-list-choise">รายการตลก</div>
+            </div>
+          </div>
           {renderCard()}
         </div>
       </div>

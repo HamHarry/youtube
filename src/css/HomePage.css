@@ -52,6 +52,7 @@
   border-bottom-left-radius: 20px;
   background-color: black;
   color: white;
+  font-family: "Sarabun", sans-serif;
 }
 .Input-Search:focus {
   outline: none;
@@ -138,6 +139,8 @@
 }
 .Card {
   width: 100vw;
+  overflow-y: auto;
+  font-family: "Sarabun", sans-serif;
 }
 .List-Card {
   display: grid;
@@ -147,7 +150,7 @@
 .List-Warp-Card {
   display: grid;
   grid-template-rows: 1fr 1fr;
-  width: 350px;
+  width: 380px;
   height: 350px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -155,9 +158,14 @@
 }
 .IMG-Warp-Card {
   height: 200px;
-  width: 350px;
+  width: 380px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+  transition: 0.5s ease;
+  opacity: 1;
+}
+.IMG-Warp-Card:hover {
+  opacity: 0.3;
 }
 .Text {
   display: flex;
