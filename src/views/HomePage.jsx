@@ -7,7 +7,7 @@ const HomePage = () => {
   const [uxui, setUxui] = useState(true);
   const [dataFollow] = useState(mockupfollow);
   const [dataListCard] = useState(mockuplistcard);
-
+  // Navbar ----------------------------------------------------------------
   const renderNav = () => {
     return (
       <div className="Nav">
@@ -51,7 +51,7 @@ const HomePage = () => {
       </div>
     );
   };
-
+  // Card ----------------------------------------------------------------
   const renderCard = () => {
     return (
       <div className="Card">
@@ -87,7 +87,7 @@ const HomePage = () => {
       </div>
     );
   };
-
+  // Choise = ture ----------------------------------------------------------------
   const renderChoiseFollow = () => {
     return (
       <div className="Choise-Follow">
@@ -103,7 +103,6 @@ const HomePage = () => {
       </div>
     );
   };
-
   const renderChoiseHome = () => {
     return (
       <div className="Choise-Home">
@@ -126,7 +125,6 @@ const HomePage = () => {
       </div>
     );
   };
-
   const renderChoiseMe = () => {
     return (
       <div className="Choise-Me">
@@ -157,7 +155,6 @@ const HomePage = () => {
       </div>
     );
   };
-
   const renderChoiseFooter = () => {
     return (
       <div className="Choise-Footer">
@@ -175,7 +172,20 @@ const HomePage = () => {
       </div>
     );
   };
-
+  const renderListChoice = () => {
+    return (
+      <div className="List-Choise">
+        <div className="List-Warp-Choise">
+          <div className="btn-list-choise">ทั้งหมด</div>
+          <div className="btn-list-choise">เกม</div>
+          <div className="btn-list-choise">เพลง</div>
+          <div className="btn-list-choise">การ์ตูน</div>
+          <div className="btn-list-choise">รายการตลก</div>
+        </div>
+      </div>
+    );
+  };
+  // Choise = false ----------------------------------------------------------------
   const renderChoiseUX = () => {
     return (
       <div className="Choise-UX">
@@ -209,7 +219,6 @@ const HomePage = () => {
       </div>
     );
   };
-
   const renderListChoiceUx = () => {
     return (
       <div className="List-Choise-Ux">
@@ -219,19 +228,6 @@ const HomePage = () => {
           <div className="btn-list-choise-Ux">เพลง</div>
           <div className="btn-list-choise-Ux">การ์ตูน</div>
           <div className="btn-list-choise-Ux">รายการตลก</div>
-        </div>
-      </div>
-    );
-  };
-  const renderListChoice = () => {
-    return (
-      <div className="List-Choise">
-        <div className="List-Warp-Choise">
-          <div className="btn-list-choise">ทั้งหมด</div>
-          <div className="btn-list-choise">เกม</div>
-          <div className="btn-list-choise">เพลง</div>
-          <div className="btn-list-choise">การ์ตูน</div>
-          <div className="btn-list-choise">รายการตลก</div>
         </div>
       </div>
     );
