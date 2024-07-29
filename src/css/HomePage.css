@@ -16,6 +16,7 @@
 .Premium {
   height: 30px;
   width: 130px;
+  cursor: pointer;
 }
 .fa-bars {
   font-size: 25px;

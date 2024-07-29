@@ -199,6 +199,7 @@
   left: 268px;
   background-color: black;
   width: 85%;
+  z-index: 1;
 }
 .List-Warp-Choise {
   display: flex;
@@ -224,13 +225,28 @@
 .btn-list-choise:hover {
   background-color: grey;
 }
+.Isselect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 35px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Sarabun", sans-serif;
+  font-size: 13px;
+}
 /* class List-Choise-Ux =============================================== */
 .List-Choise-Ux {
   position: fixed;
   left: 80px;
-  top: 83px;
+  top: 80px;
   background-color: black;
   width: 93%;
+  z-index: 1;
 }
 .List-Warp-Choise-Ux {
   display: flex;
@@ -255,4 +271,18 @@
 }
 .btn-list-choise-Ux:hover {
   background-color: grey;
+}
+.Isselect-Ux {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 35px;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: "Sarabun", sans-serif;
+  font-size: 13px;
 }

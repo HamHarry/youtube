@@ -1,7 +1,7 @@
 const mockupfollow = [
   {
     img: "/src/image/logo/HRK.jpg",
-    name: "HERRTROCKER",
+    name: "HERTROCKER",
   },
   {
     img: "/src/image/logo/OHANA.jpg",

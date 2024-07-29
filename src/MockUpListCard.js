@@ -1,5 +1,6 @@
 const mockuplistcard = [
   {
+    type: "game",
     img: "/src/image/listplay/game/listplayTalon.png",
     logo: "/src/image/logo/Talon.png",
     name: "TALON Valorant",
@@ -8,6 +9,7 @@ const mockuplistcard = [
     watch: "การดู 5.3 พัน ครั้ง",
   },
   {
+    type: "comedy",
     img: "/src/image/listplay/comedy/คำต้องเชื่อมEP84.png",
     logo: "/src/image/logo/ยกกำลัง.png",
     name: "ยกกำลัง",
@@ -16,6 +18,7 @@ const mockuplistcard = [
     watch: "การดู 5.3 แสน ครั้ง",
   },
   {
+    type: "comedy",
     img: "/src/image/listplay/comedy/คำต้องเชื่อมEP94.png",
     logo: "/src/image/logo/ยกกำลัง.png",
     name: "ยกกำลัง",
@@ -24,6 +27,7 @@ const mockuplistcard = [
     watch: "การดู 2.3 แสน ครั้ง",
   },
   {
+    type: "comedy",
     img: "/src/image/listplay/comedy/SoundsFashy.png",
     logo: "/src/image/logo/RUBSHRB.jpg",
     name: "RUBSHRB",
@@ -32,6 +36,7 @@ const mockuplistcard = [
     watch: "การดู 9.1 แสน ครั้ง",
   },
   {
+    type: "comedy",
     img: "/src/image/listplay/comedy/Q&AEP19.png",
     logo: "/src/image/logo/OHANA.jpg",
     name: "Ohana clip",
@@ -40,6 +45,7 @@ const mockuplistcard = [
     watch: "การดู 4.4 แสน ครั้ง",
   },
   {
+    type: "comedy",
     img: "/src/image/listplay/comedy/ขั้นเขา3000ขั้น.png",
     logo: "/src/image/logo/RUBSHRB.jpg",
     name: "RUBSHRB",
@@ -48,14 +54,16 @@ const mockuplistcard = [
     watch: "การดู 6.9 แสน ครั้ง",
   },
   {
+    type: "game",
     img: "/src/image/listplay/game/หมูป่า.png",
     logo: "/src/image/logo/HRK.jpg",
-    name: "HERRTROCKER",
+    name: "HERTROCKER",
     caption: "ขอบคุณมากฮะ พี่หมูป่า - สายด่วนป่วน FREE FIRE #22",
     time: "9 เดือนที่ผ่านมา",
     watch: "การดู 5.3 แสน ครั้ง",
   },
   {
+    type: "comedy",
     img: "/src/image/listplay/comedy/werewolfEP.14.png",
     logo: "/src/image/logo/เทพลีลา.jpg",
     name: "เทพลีลา",
@@ -65,6 +73,7 @@ const mockuplistcard = [
     watch: "การดู 9.1 แสน ครั้ง",
   },
   {
+    type: "music",
     img: "/src/image/listplay/music/ข้างกัน.png",
     logo: "/src/image/logo/Three man down.png",
     name: "ThreeManDownOfficial",
@@ -74,6 +83,7 @@ const mockuplistcard = [
     watch: "การดู 131 ล้าน ครั้ง",
   },
   {
+    type: "comedy",
     img: "/src/image/listplay/comedy/อะไรอยู่บนหัว.png",
     logo: "/src/image/logo/RUBSHRB.jpg",
     name: "RUBSHRB",
@@ -82,6 +92,7 @@ const mockuplistcard = [
     watch: "การดู 5.4 แสน ครั้ง",
   },
   {
+    type: "music",
     img: "/src/image/listplay/music/อยู่กับฉันก่อน.png",
     logo: "/src/image/logo/Saran.jpg",
     name: "SARAN",
@@ -91,6 +102,7 @@ const mockuplistcard = [
     watch: "การดู 3.6 ล้าน ครั้ง",
   },
   {
+    type: "music",
     img: "/src/image/listplay/music/ใจพัง.png",
     logo: "/src/image/logo/Saran.jpg",
     name: "SARAN",
@@ -99,6 +111,7 @@ const mockuplistcard = [
     watch: "การดู 7.6 ล้าน ครั้ง",
   },
   {
+    type: "comedy",
     img: "/src/image/listplay/comedy/blackpanther.png",
     logo: "/src/image/logo/VRZO.jpg",
     name: "VRZOchannel",
@@ -107,6 +120,7 @@ const mockuplistcard = [
     watch: "การดู 4.9 แสน ครั้ง",
   },
   {
+    type: "comedy",
     img: "/src/image/listplay/comedy/หูหนวกทายคำ.png",
     logo: "/src/image/logo/OHANA.jpg",
     name: "Ohana clip",
@@ -115,6 +129,7 @@ const mockuplistcard = [
     watch: "การดู 1.7 ล้าน ครั้ง",
   },
   {
+    type: "comedy",
     img: "/src/image/listplay/comedy/ที่เป็นเรา.png",
     logo: "/src/image/logo/VRZO.jpg",
     name: "VRZOchannel",
@@ -123,6 +138,7 @@ const mockuplistcard = [
     watch: "การดู 1.7 แสน ครั้ง",
   },
   {
+    type: "music",
     img: "/src/image/listplay/music/คิด(แต่ไม่)ถึง.png",
     logo: "/src/image/logo/Three man down.png",
     name: "ThreeManDownOfficial",
@@ -132,6 +148,25 @@ const mockuplistcard = [
     watch: "การดู 8.7 ล้าน ครั้ง",
   },
   {
+    type: "game",
+    img: "/src/image/listplay/game/NightoftheDead.png",
+    logo: "/src/image/logo/CigaretteSTV.jpg",
+    name: "CigaretteS TV",
+    caption: "Night of the Dead | ผมเป็นพี่ยาม #1 Highlight",
+    time: "3 ปีที่แล้ว",
+    watch: "การดู 7.8 แสน ครั้ง",
+  },
+  {
+    type: "game",
+    img: "/src/image/listplay/game/WHENNAANDAPAC.png",
+    logo: "/src/image/logo/f0rsakeN.jpg",
+    name: "f0rsakeN",
+    caption: "WHEN NA AND APAC RADIANT#1 DUO w/@zekkenVAL | PRX F0RSAKEN",
+    time: "1 วันที่ผ่านมา",
+    watch: "การดู 7.5 หมื่น ครั้ง",
+  },
+  {
+    type: "music",
     img: "/src/image/listplay/music/คิดฮอด7ZGTREMIX.png",
     logo: "/src/image/logo/7ZGT.jpg",
     name: "7ZGT",
@@ -141,6 +176,7 @@ const mockuplistcard = [
     watch: "การดู 5.7 ล้าน ครั้ง",
   },
   {
+    type: "music",
     img: "/src/image/listplay/music/ทุ้มอยู่ในใจ.png",
     logo: "/src/image/logo/GTHchannel.jpg",
     name: "GTHchannel",
@@ -149,6 +185,7 @@ const mockuplistcard = [
     watch: "การดู 12 ล้าน ครั้ง",
   },
   {
+    type: "music",
     img: "/src/image/listplay/music/ผู้ชายไม่เป็นเพื่อนกับผู้หญิง.png",
     logo: "/src/image/logo/Three man down.png",
     name: "ThreeManDownOfficial",
@@ -158,6 +195,7 @@ const mockuplistcard = [
     watch: "การดู 15 ล้าน ครั้ง",
   },
   {
+    type: "music",
     img: "/src/image/listplay/music/ส่งเธอได้เท่านี้.png",
     logo: "/src/image/logo/lomosonicofficial.png",
     name: "lomosonicofficial",
@@ -167,6 +205,7 @@ const mockuplistcard = [
     watch: "การดู 10.5 ล้าน ครั้ง",
   },
   {
+    type: "music",
     img: "/src/image/listplay/music/เพลงที่เธอไม่ฟัง.png",
     logo: "/src/image/logo/TERO MUSIC.png",
     name: "TERO MUSIC",
@@ -175,6 +214,7 @@ const mockuplistcard = [
     watch: "การดู 3.5 ล้าน ครั้ง",
   },
   {
+    type: "game",
     img: "/src/image/listplay/game/HowFNATICSound.png",
     logo: "/src/image/logo/FNATIC.png",
     name: "FNATIC Valorant",
@@ -182,23 +222,9 @@ const mockuplistcard = [
     time: "3 สัปดาห์ที่ผ่านมา",
     watch: "การดู 7.8 หมื่น ครั้ง",
   },
+
   {
-    img: "/src/image/listplay/game/NightoftheDead.png",
-    logo: "/src/image/logo/CigaretteSTV.jpg",
-    name: "CigaretteS TV",
-    caption: "Night of the Dead | ผมเป็นพี่ยาม #1 Highlight",
-    time: "3 ปีที่แล้ว",
-    watch: "การดู 7.8 แสน ครั้ง",
-  },
-  {
-    img: "/src/image/listplay/game/WHENNAANDAPAC.png",
-    logo: "/src/image/logo/f0rsakeN.jpg",
-    name: "f0rsakeN",
-    caption: "WHEN NA AND APAC RADIANT#1 DUO w/@zekkenVAL | PRX F0RSAKEN",
-    time: "1 วันที่ผ่านมา",
-    watch: "การดู 7.5 หมื่น ครั้ง",
-  },
-  {
+    type: "game",
     img: "/src/image/listplay/game/ชาร์ล็อตแพ้ฟลอเรนจริงหรอ.png",
     logo: "/src/image/logo/กายหงิด.png",
     name: "กายหงิด",
@@ -207,14 +233,16 @@ const mockuplistcard = [
     watch: "การดู 6.4 แสน ครั้ง",
   },
   {
+    type: "game",
     img: "/src/image/listplay/game/ตำนานนักคุยกับท่อ.png",
     logo: "/src/image/logo/HRK.jpg",
-    name: "HERRTROCKER",
+    name: "HERTROCKER",
     caption: "ตำนานนักคุยกับท่อ - GGD Highlight #4",
     time: "2 ปีที่แล้ว",
     watch: "การดู 1.4 ล้าน ครั้ง",
   },
   {
+    type: "game",
     img: "/src/image/listplay/game/ทิ้งทีมงาน1คน.png",
     logo: "/src/image/logo/กายหงิด.png",
     name: "กายหงิด",
@@ -224,6 +252,16 @@ const mockuplistcard = [
     watch: "การดู 4.3 แสน ครั้ง",
   },
   {
+    type: "music",
+    img: "/src/image/listplay/music/SORRY.png",
+    logo: "/src/image/logo/MEWONEE.jpg",
+    name: "MEWONEE",
+    caption: "【DREAMGALS】 SORRY (Prod. by MAYOJAMES)",
+    time: "1 ปีที่แล้ว",
+    watch: "การดู 121 ล้าน ครั้ง",
+  },
+  {
+    type: "game",
     img: "/src/image/listplay/game/ยุทธการเรือโหม่ง.png",
     logo: "/src/image/logo/TANX_logo.png",
     name: "TANX",
@@ -232,6 +270,7 @@ const mockuplistcard = [
     watch: "การดู 3.2 พัน ครั้ง",
   },
   {
+    type: "game",
     img: "/src/image/listplay/game/เซิฟLONDON.png",
     logo: "/src/image/logo/TANX_logo.png",
     name: "TANX",

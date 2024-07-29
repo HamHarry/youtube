@@ -6,7 +6,10 @@ import mockuplistcard from "../MockUpListCard";
 const HomePage = () => {
   const [uxui, setUxui] = useState(true);
   const [dataFollow] = useState(mockupfollow);
-  const [dataListCard] = useState(mockuplistcard);
+  const [dataListCard, setDataListCard] = useState(mockuplistcard);
+  const [dataListCardRef] = useState(dataListCard);
+  const [searchValue, setSearchValue] = useState();
+  const [selectedType, setSelectedType] = useState("all");
   // Navbar ----------------------------------------------------------------
   const renderNav = () => {
     return (
@@ -24,11 +27,19 @@ const HomePage = () => {
             src="/src/image/YouTube_Premium_logo.svg.png"
             alt="logo"
             className="Premium"
+            onClick={() => {
+              return window.location.reload(false);
+            }}
           />
         </div>
         <div className="Nav-Search">
           <div className="Search">
-            <input type="text" placeholder="ค้นหา" className="Input-Search" />
+            <input
+              type="text"
+              placeholder="ค้นหา"
+              className="Input-Search"
+              onChange={handleChange}
+            />
             <i className="fa-solid fa-magnifying-glass"></i>
           </div>
           <button className="Btn-microphone">
@@ -88,25 +99,15 @@ const HomePage = () => {
     );
   };
   // Choise = ture ----------------------------------------------------------------
-  const renderChoiseFollow = () => {
-    return (
-      <div className="Choise-Follow">
-        <p>การติดตาม</p>
-        {dataFollow.map((item, index) => {
-          return (
-            <div key={index} className="btn-listfollow">
-              <img className="IMGLOGO" src={item.img} alt={item.name} />
-              <p>{item.name}</p>
-            </div>
-          );
-        })}
-      </div>
-    );
-  };
   const renderChoiseHome = () => {
     return (
       <div className="Choise-Home">
-        <div className="btn-home">
+        <div
+          className="btn-home"
+          onClick={() => {
+            return window.location.reload(false);
+          }}
+        >
           <i className="fa-solid fa-house"></i>
           <p>หน้าแรก</p>
         </div>
@@ -155,6 +156,21 @@ const HomePage = () => {
       </div>
     );
   };
+  const renderChoiseFollow = () => {
+    return (
+      <div className="Choise-Follow">
+        <p>การติดตาม</p>
+        {dataFollow.map((item, index) => {
+          return (
+            <div key={index} className="btn-listfollow">
+              <img className="IMGLOGO" src={item.img} alt={item.name} />
+              <p>{item.name}</p>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
   const renderChoiseFooter = () => {
     return (
       <div className="Choise-Footer">
@@ -176,11 +192,63 @@ const HomePage = () => {
     return (
       <div className="List-Choise">
         <div className="List-Warp-Choise">
-          <div className="btn-list-choise">ทั้งหมด</div>
-          <div className="btn-list-choise">เกม</div>
-          <div className="btn-list-choise">เพลง</div>
-          <div className="btn-list-choise">การ์ตูน</div>
-          <div className="btn-list-choise">รายการตลก</div>
+          <div
+            className={selectedType === "all" ? "Isselect" : "btn-list-choise"}
+            onClick={() => {
+              const newdata = dataListCardRef.filter((item) => {
+                return (
+                  item.type === "game" ||
+                  item.type === "music" ||
+                  item.type === "comedy"
+                );
+              });
+              setDataListCard(newdata);
+              setSelectedType("all");
+            }}
+          >
+            ทั้งหมด
+          </div>
+          <div
+            className={selectedType === "game" ? "Isselect" : "btn-list-choise"}
+            onClick={() => {
+              const newdata = dataListCardRef.filter((item) => {
+                return item.type === "game";
+              });
+              setDataListCard(newdata);
+              setSelectedType("game");
+              console.log(newdata);
+            }}
+          >
+            เกม
+          </div>
+          <div
+            className={
+              selectedType === "music" ? "Isselect" : "btn-list-choise"
+            }
+            onClick={() => {
+              const newdata = dataListCardRef.filter((item) => {
+                return item.type === "music";
+              });
+              setDataListCard(newdata);
+              setSelectedType("music");
+            }}
+          >
+            เพลง
+          </div>
+          <div
+            className={
+              selectedType === "comedy" ? "Isselect" : "btn-list-choise"
+            }
+            onClick={() => {
+              const newdata = dataListCardRef.filter((item) => {
+                return item.type === "comedy";
+              });
+              setDataListCard(newdata);
+              setSelectedType("comedy");
+            }}
+          >
+            รายการตลก
+          </div>
         </div>
       </div>
     );
@@ -190,7 +258,12 @@ const HomePage = () => {
     return (
       <div className="Choise-UX">
         <div className="Choise-Home-UX">
-          <div className="btn-choise-ux">
+          <div
+            className="btn-choise-ux"
+            onClick={() => {
+              return window.location.reload(false);
+            }}
+          >
             <i className="fa-solid fa-house"></i>
             <p>หน้าแรก</p>
           </div>
@@ -223,14 +296,80 @@ const HomePage = () => {
     return (
       <div className="List-Choise-Ux">
         <div className="List-Warp-Choise-Ux">
-          <div className="btn-list-choise-Ux">ทั้งหมด</div>
-          <div className="btn-list-choise-Ux">เกม</div>
-          <div className="btn-list-choise-Ux">เพลง</div>
-          <div className="btn-list-choise-Ux">การ์ตูน</div>
-          <div className="btn-list-choise-Ux">รายการตลก</div>
+          <div
+            className={
+              selectedType === "all" ? "Isselect-Ux" : "btn-list-choise-Ux"
+            }
+            onClick={() => {
+              const newdata = dataListCardRef.filter((item) => {
+                return (
+                  item.type === "game" ||
+                  item.type === "music" ||
+                  item.type === "comedy"
+                );
+              });
+              setDataListCard(newdata);
+              setSelectedType("all");
+            }}
+          >
+            ทั้งหมด
+          </div>
+          <div
+            className={
+              selectedType === "game" ? "Isselect-Ux" : "btn-list-choise-Ux"
+            }
+            onClick={() => {
+              const newdata = dataListCardRef.filter((item) => {
+                return item.type === "game";
+              });
+              setDataListCard(newdata);
+              setSelectedType("game");
+            }}
+          >
+            เกม
+          </div>
+          <div
+            className={
+              selectedType === "music" ? "Isselect-Ux" : "btn-list-choise-Ux"
+            }
+            onClick={() => {
+              const newdata = dataListCardRef.filter((item) => {
+                return item.type === "music";
+              });
+              setDataListCard(newdata);
+              setSelectedType("music");
+            }}
+          >
+            เพลง
+          </div>
+          <div
+            className={
+              selectedType === "comedy" ? "Isselect-Ux" : "btn-list-choise-Ux"
+            }
+            onClick={() => {
+              const newdata = dataListCardRef.filter((item) => {
+                return item.type === "comedy";
+              });
+              setDataListCard(newdata);
+              setSelectedType("comedy");
+            }}
+          >
+            รายการตลก
+          </div>
         </div>
       </div>
     );
+  };
+  // Search ----------------------------------------------------------------
+  const handleChange = (e) => {
+    const value = e.target.value.toLowerCase();
+    const newdata = dataListCardRef.filter((item) => {
+      const searchcaption = String(item.caption).toLowerCase().includes(value);
+      const searchname = String(item.name).toLowerCase().includes(value);
+      return searchcaption || searchname;
+    });
+    setDataListCard(newdata);
+    setSearchValue(value);
   };
 
   return (
