@@ -37,7 +37,7 @@ const mockupfollow = [
   },
   {
     img: "/src/image/logo/Three man down.png",
-    name: "ThreeManDown",
+    name: "ThreeManDownOfficial",
   },
 ];
 export default mockupfollow;

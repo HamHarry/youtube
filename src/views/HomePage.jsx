@@ -8,8 +8,9 @@ const HomePage = () => {
   const [dataFollow] = useState(mockupfollow);
   const [dataListCard, setDataListCard] = useState(mockuplistcard);
   const [dataListCardRef] = useState(dataListCard);
-  const [searchValue, setSearchValue] = useState();
   const [selectedType, setSelectedType] = useState("all");
+  const [searchValue, setSearchValue] = useState("");
+  const [tab, setTab] = useState("home");
   // Navbar ----------------------------------------------------------------
   const renderNav = () => {
     return (
@@ -103,9 +104,10 @@ const HomePage = () => {
     return (
       <div className="Choise-Home">
         <div
-          className="btn-home"
+          className={tab === "home" ? "is-btn-home" : "btn-home"}
           onClick={() => {
-            return window.location.reload(false);
+            window.location.reload(false);
+            setTab("home");
           }}
         >
           <i className="fa-solid fa-house"></i>
@@ -123,12 +125,14 @@ const HomePage = () => {
           <i className="fa-regular fa-circle-play"></i>
           <p>YouTube Music</p>
         </div>
+        <br />
       </div>
     );
   };
   const renderChoiseMe = () => {
     return (
       <div className="Choise-Me">
+        <br />
         <div className="Is-Me">
           <p>คุณ</p>
           <i className="fa-solid fa-angle-right"></i>
@@ -153,12 +157,14 @@ const HomePage = () => {
           <i className="fa-solid fa-download"></i>
           <p>การดาวน์โหลด</p>
         </div>
+        <br />
       </div>
     );
   };
   const renderChoiseFollow = () => {
     return (
       <div className="Choise-Follow">
+        <br />
         <p>การติดตาม</p>
         {dataFollow.map((item, index) => {
           return (
@@ -168,12 +174,14 @@ const HomePage = () => {
             </div>
           );
         })}
+        <br />
       </div>
     );
   };
   const renderChoiseFooter = () => {
     return (
       <div className="Choise-Footer">
+        <br />
         <p>
           เกี่ยวกับ สื่อลิขสิทธิ์ ติดต่อเรา <br />
           ครีเอเตอร์โฆษณา <br />
@@ -185,71 +193,7 @@ const HomePage = () => {
         </p>
         <br />
         <p>© 2024 Google LLC</p>
-      </div>
-    );
-  };
-  const renderListChoice = () => {
-    return (
-      <div className="List-Choise">
-        <div className="List-Warp-Choise">
-          <div
-            className={selectedType === "all" ? "Isselect" : "btn-list-choise"}
-            onClick={() => {
-              const newdata = dataListCardRef.filter((item) => {
-                return (
-                  item.type === "game" ||
-                  item.type === "music" ||
-                  item.type === "comedy"
-                );
-              });
-              setDataListCard(newdata);
-              setSelectedType("all");
-            }}
-          >
-            ทั้งหมด
-          </div>
-          <div
-            className={selectedType === "game" ? "Isselect" : "btn-list-choise"}
-            onClick={() => {
-              const newdata = dataListCardRef.filter((item) => {
-                return item.type === "game";
-              });
-              setDataListCard(newdata);
-              setSelectedType("game");
-              console.log(newdata);
-            }}
-          >
-            เกม
-          </div>
-          <div
-            className={
-              selectedType === "music" ? "Isselect" : "btn-list-choise"
-            }
-            onClick={() => {
-              const newdata = dataListCardRef.filter((item) => {
-                return item.type === "music";
-              });
-              setDataListCard(newdata);
-              setSelectedType("music");
-            }}
-          >
-            เพลง
-          </div>
-          <div
-            className={
-              selectedType === "comedy" ? "Isselect" : "btn-list-choise"
-            }
-            onClick={() => {
-              const newdata = dataListCardRef.filter((item) => {
-                return item.type === "comedy";
-              });
-              setDataListCard(newdata);
-              setSelectedType("comedy");
-            }}
-          >
-            รายการตลก
-          </div>
-        </div>
+        <br />
       </div>
     );
   };
@@ -288,25 +232,25 @@ const HomePage = () => {
             <p>การดาวน์โหลด</p>
           </div>
         </div>
-        {renderListChoiceUx()}
       </div>
     );
   };
-  const renderListChoiceUx = () => {
+  // ListChoice ----------------------------------------------------------------
+  const renderListChoice = () => {
     return (
-      <div className="List-Choise-Ux">
-        <div className="List-Warp-Choise-Ux">
+      <div className={`List-Choise ${uxui && "List-Choise-Ux"}`}>
+        <div className="List-Warp-Choise">
           <div
-            className={
-              selectedType === "all" ? "Isselect-Ux" : "btn-list-choise-Ux"
-            }
+            className={selectedType === "all" ? "Isselect" : "btn-list-choise"}
             onClick={() => {
               const newdata = dataListCardRef.filter((item) => {
-                return (
-                  item.type === "game" ||
-                  item.type === "music" ||
-                  item.type === "comedy"
-                );
+                const searchcaption = String(item.caption)
+                  .toLowerCase()
+                  .includes(searchValue);
+                const searchname = String(item.name)
+                  .toLowerCase()
+                  .includes(searchValue);
+                return searchcaption || searchname;
               });
               setDataListCard(newdata);
               setSelectedType("all");
@@ -315,26 +259,37 @@ const HomePage = () => {
             ทั้งหมด
           </div>
           <div
-            className={
-              selectedType === "game" ? "Isselect-Ux" : "btn-list-choise-Ux"
-            }
+            className={selectedType === "game" ? "Isselect" : "btn-list-choise"}
             onClick={() => {
               const newdata = dataListCardRef.filter((item) => {
-                return item.type === "game";
+                const searchcaption = String(item.caption)
+                  .toLowerCase()
+                  .includes(searchValue);
+                const searchname = String(item.name)
+                  .toLowerCase()
+                  .includes(searchValue);
+                return item.type === "game" && (searchcaption || searchname);
               });
               setDataListCard(newdata);
               setSelectedType("game");
+              console.log(newdata);
             }}
           >
             เกม
           </div>
           <div
             className={
-              selectedType === "music" ? "Isselect-Ux" : "btn-list-choise-Ux"
+              selectedType === "music" ? "Isselect" : "btn-list-choise"
             }
             onClick={() => {
               const newdata = dataListCardRef.filter((item) => {
-                return item.type === "music";
+                const searchcaption = String(item.caption)
+                  .toLowerCase()
+                  .includes(searchValue);
+                const searchname = String(item.name)
+                  .toLowerCase()
+                  .includes(searchValue);
+                return item.type === "music" && (searchcaption || searchname);
               });
               setDataListCard(newdata);
               setSelectedType("music");
@@ -344,11 +299,17 @@ const HomePage = () => {
           </div>
           <div
             className={
-              selectedType === "comedy" ? "Isselect-Ux" : "btn-list-choise-Ux"
+              selectedType === "comedy" ? "Isselect" : "btn-list-choise"
             }
             onClick={() => {
               const newdata = dataListCardRef.filter((item) => {
-                return item.type === "comedy";
+                const searchcaption = String(item.caption)
+                  .toLowerCase()
+                  .includes(searchValue);
+                const searchname = String(item.name)
+                  .toLowerCase()
+                  .includes(searchValue);
+                return item.type === "comedy" && (searchcaption || searchname);
               });
               setDataListCard(newdata);
               setSelectedType("comedy");
@@ -366,7 +327,10 @@ const HomePage = () => {
     const newdata = dataListCardRef.filter((item) => {
       const searchcaption = String(item.caption).toLowerCase().includes(value);
       const searchname = String(item.name).toLowerCase().includes(value);
-      return searchcaption || searchname;
+      return (
+        (searchcaption || searchname) &&
+        (item.type === selectedType || selectedType === "all")
+      );
     });
     setDataListCard(newdata);
     setSearchValue(value);
@@ -377,25 +341,20 @@ const HomePage = () => {
       {renderNav()}
       <div className="Container">
         <div className="Choise-Container">
-          {uxui && (
+          {uxui ? (
             <div className="Choise">
               {renderChoiseHome()}
-              <br />
               <hr />
-              <br />
               {renderChoiseMe()}
-              <br />
               <hr />
-              <br />
               {renderChoiseFollow()}
-              <br />
               <hr />
-              <br />
               {renderChoiseFooter()}
-              {renderListChoice()}
             </div>
+          ) : (
+            renderChoiseUX()
           )}
-          {!uxui && renderChoiseUX()}
+          {renderListChoice()}
           {renderCard()}
         </div>
       </div>
